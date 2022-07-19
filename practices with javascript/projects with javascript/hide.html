@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>we can hide and show html elements with javascript</h3>
+<p id="java">
+    Hello its javascript
+</p>
+<!--you can use either the in-line js or the other anyone you perfer-->
+<button onclick="font()"><!--this is used to change the font size of the p tag-->
+    change front-size
+</button>
+<button type="button" onclick="hide()" ><!--onclick="document.getElementById('java').style.display= 'none' "-->
+    Hide
+</button>
+<button type="button" onclick="show()"  > <!--onclick="document.getElementById('java').style.display= 'block'"-->
+    Show 
+</button>
+<script>
+    //changed the display type to none in-order to make the content of the p tag in-visible
+function hide() {
+    document.getElementById('java').style.display= 'none';
+}
+//changed the display type to block in-order to make the content of the p tag visible 
+function show() {
+    document.getElementById('java').style.display= 'block';
+}
+function font() {
+    document.getElementById('java').style.fontSize='35px';
+}
+</script>
+</body>
+</html>

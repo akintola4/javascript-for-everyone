@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>using js to change html elements</h1>
+    <p>My name is
+         <p id="demo">****</p> 
+        Akintola</p>
+        <!--i called the function change() here to make it work, you can change my name to test it out ourself -->>
+    <button type="button" onclick="change()">
+        click to get my Frist-name 
+    </button>
+
+    <script>
+        //i created a function to be able to create the effective change in our html you can change it too 
+        function change (){
+            document.getElementById("demo").innerHTML = "Tope";
+        }
+    </script>
+</body>
+</html>

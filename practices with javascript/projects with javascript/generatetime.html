@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Generate date and time with javascript</h1>
+<button type="button" onclick="date()">
+    Click me!!
+</button>
+
+    <!--this block of code uses in-line javascript
+        <button type="button" id="dateTime" onclick="document.getElementById('time').innerHTML = Date()">
+    click me!!
+    </button>-->
+
+    <p id="time"></p>
+    <script>
+function date() {
+    document.getElementById("time").innerHTML=Date();
+}
+
+//to get full date and time and also incase you not going to use the <p> in your html
+ /*var d = new Date();
+ d.setFullYear(2022, 0, 14);
+ document.getElementById('time').innerHTML = d; */
+    </script>
+</body>
+</html>
