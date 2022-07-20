@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript objects</h2>
+    <P id="get"></P>
+<script>
+    //working with objects and constants
+    //you can write it like this or 
+    //where first_name is a property and "tope" is a property value
+    /*const person = {first_name:"tope", last_name:"Akintola", seecond_name:"akinfolarin", age:"21", eye_color:"brown"};*/
+
+    //you can also write it like this 
+    const person1 ={
+        first_name:"temi", //dont forget to put you (,) in order to go to the next property 
+        last_name:"Akintola",
+        age:"17",
+        eye_color:"gold",
+        //we going to use (this) keyword to reference an object
+        fullname: function() {
+        return "my name is " + this.first_name + " " + this.last_name;
+    }
+    };
+     //display the data from the funtion fullname() in person1
+     document.getElementById("get").innerHTML=person1.fullname();
+</script>
+</body>
+</html>
