@@ -1,6 +1,6 @@
 //'functions
 //return with function 
- package// return sends the returned value back to the caller
+ // return sends the returned value back to the caller
 
 function addition(a, b) {
     var addition= a + b;

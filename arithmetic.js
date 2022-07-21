@@ -17,16 +17,17 @@
         console.log(sum);
 
         //subtraction of mutiple numbers and a variable
-        
         var x = 10;
         var y = x - 100 - 80 ;
         console.log(y);
         
         //mutiplication 
-       
         var prod = 10 * 5;
         console.log(prod);
 
+        //exponenttation
+        var exp_ = 3**4;
+        console.log(exp_); 
         // division
        
         var div = 10 / 5;
