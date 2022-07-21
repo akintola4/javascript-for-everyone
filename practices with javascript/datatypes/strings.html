@@ -6,6 +6,29 @@
     <title>Document</title>
 </head>
 <body>
+    <h3 >Hello and welcome to strings for js</h3>
+    <p id="test"></p>
+
+    <p id="test2" ></p>
+
+    <p id="test3"></p>
+
+    <p id="test4"></p>
+
+    <p id="test5"></p>
+
+ <button onclick="replace()"  >Try it</button>
+<p id="test6">I love eating noodles </p>
+
+<button onclick="replace2()"  >Try it</button>
+<p id="test7">I love eating fish and fish</p>
+
+<button onclick="toup()"  >Try it</button>
+<p id="test8">I love my mum</p>
+
+<button onclick="tolow()"  >Try it</button>
+<p id="test9">I LOVE MY MACBOOK</p>
+
     <script>
         //always remmeber to close the line of code with ( ; ) it very important 
         var name ='foster';
@@ -13,6 +36,47 @@
         var text2 = "foster loves'mabel' ";
         var text3 = 'Hello world! \'i am a javascript dev.\' ';
         
+        //we can also get the lenght of a string 
+        document.getElementById("test").innerHTML=text.length;
+
+        //using backslash to be able to add a single quote to our string
+        let word = "it'\s okay to be confused";
+        document.getElementById("test2").innerHTML=word;
+
+        //using backslash to be able to use double quote inside our string in js
+        let wordie = "but never \"give\" up on your dreams.";
+        document.getElementById("test3").innerHTML = wordie;
+        
+        //you can also add backslash to you words
+        let wor = "Cause you\ a rockstar\\";
+        document.getElementById("test4").innerHTML = wor;
+
+         //you can also add a new line to you words
+         let war = "we will always love\n you";
+        document.getElementById("test5").innerHTML = war;
+
+        //replacing text in our paragraph in html test6
+        /*function replace(){
+                let text=document.getElementById("test6").innerHTML;
+                document.getElementById("test6").innerHTML= text.replace("noodles","Pizza");
+        }*/
+
+        //replacing text in our paragraph in html test6 all text that match the text
+        function replace2(){
+                let text=document.getElementById("test7").innerHTML;
+                document.getElementById("test7").innerHTML= text.replace(/fish/g,"yam-eyes");
+        }
+        //changint
+        function toup(){
+            let text=document.getElementById("test8").innerHTML;
+            document.getElementById("test8").innerHTML=text.toUpperCase();
+        }
+
+        //changing text to lowercase
+        function tolow(){
+            let text=document.getElementById("test9").innerHTML;
+            document.getElementById("test9").innerHTML=text.toLowerCase();
+        }
     </script>
 </body>
 </html>
