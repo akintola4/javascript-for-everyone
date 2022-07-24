@@ -11,9 +11,13 @@ let result;
 //e for event
 //clicks used to get the value of the user clicks on
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) =>{
+    //store the values of id of the element the user clicks from there id
     userChoice= e.target.id;
+    //to output the user choices
     userChoiceDisplay.innerHTML = userChoice;
+    //to get the computer choice
     generateComputerChoice();
+    //to get the result of the game
     getresult();
 }));
 
@@ -60,5 +64,6 @@ function getresult() {
     if (userChoice === "paper " && computerChoice === "rock") {
         result = "You Win!!"
     }
+    //to display the results of the conditions 
    resultDisplay.innerHTML = result;
 }
