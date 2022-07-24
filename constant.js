@@ -14,5 +14,5 @@ person.car="BMW";
 
 
 const name = "tope";
-//it wont work since name is a constant thus cant be chnaged 
+//it wont work since name is a constant thus cant be changed 
 name = "fola";
