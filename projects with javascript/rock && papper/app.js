@@ -4,10 +4,12 @@ const resultDisplay = document.getElementById("result");
 
 const possibleChoices = document.querySelectorAll("button");
 
-//used the let keyword to be able to reassign the keys
+//used the let keyword to be able to access the values globaly 
 let userChoice;
 let computerChoice;
 let result;
+//e for event
+//clicks used to get the value of the user clicks on
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) =>{
     userChoice= e.target.id;
     userChoiceDisplay.innerHTML = userChoice;
