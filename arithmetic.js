@@ -46,30 +46,10 @@
         inc++
         console.log(inc);
 
-        //post-increament 
-        
-        var a=0, b=5;
-        var a=b++;
-        console.log(a)
-        //pre increament 
-        
-        var b=0, b=5;
-        var a=++b;
-        console.log(a)
         //decreament 
-       
         var dec = 10 + 5;
         dec--;
         console.log(dec);
-        //post-decreament 
-        
-        var a=0, b=5;
-        var a=b--;
-        console.log(a)
-        //pre decreament 
-        
-        var a=27, b=9;
-        var a=--b;
         //and operator &&
         //or operator ||
 
