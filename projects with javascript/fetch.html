@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="anime" height="480">
+    <script>
+
+        catchanime();
+
+        async function catchanime(){
+            const response = await fetch('anime.jpeg');
+            const blob = await response.blob();
+            document.getElementById('anime').src = URL.createObjectURL(blob);
+        }
+    </script>
+</body>
+</html>

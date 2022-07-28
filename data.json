@@ -1,0 +1,17 @@
+{
+ "date": "date()",
+ "people": [
+    {
+        "name": "tope",
+        "age": 21,
+        "gender": "male",
+        "country": "Nigeria"
+    },
+    {
+        "name":"fola",
+        "age": 22,
+        "gender":"male",
+        "country": "London"
+    }
+ ]
+}
