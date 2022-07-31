@@ -3,17 +3,17 @@
  // return sends the returned value back to the caller
 
 function addition(a, b) {
-    var addition= a + b;
+    const addition= a + b;
     return addition;
 }
 
-var add = addition(10, 8);
+const add = addition(10, 8);
 console.log(add);
 
 function subtraction(a, b) {
-    var subtraction= a - b;
+    const subtraction= a - b;
     return subtraction
 }
 
-var sub = subtraction(20, 10);
+const sub = subtraction(20, 10);
 console.log(sub);
