@@ -4,104 +4,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link id="theme" type="text/css" rel="stylesheet" href="light.css">
 </head>
-<style>
-    body{
-    display: grid;
-    align-items: center;
-    align-content: center;
-    margin: 0%;
-    height: 100vh;
-    justify-content: center;
-    background: grey;
-        font-family: sans-serif;
-    }
 
-    .container{
-        width: 360px;
-        display: inline-block;
-        align-items: center;
-        align-content: center;
-        padding: 34px;
-        box-sizing: border-box;
-        border-radius: 20px;
-        background: white;
-        
-    }
-    .output{
-        background: rgb(255, 255, 255);
-        padding: 10px 40px;
-        color: purple;
-        width: 200px;
-        border-radius: 20px;
-        text-align: end;
-        box-shadow: inset 0px 2px 15px rgb(175 175 175 / 50%);
-    }
-    .digits{
-        display: flex;
-        flex-direction: row;
-        margin: 20px 0px;
-        flex-wrap: wrap;
-        color: black;
-       justify-content: space-evenly;
-    }
-    h5{
-    font-size: large;
-    box-shadow: -1px 2px 13px 2px rgb(175 175 175 / 50%);
-    border-radius: 50px;
-    padding: 13px;
-    margin: 12px;
-    align-items: center;
-    width: 42px;
-    cursor: pointer;
-    text-align: center;
-    }
-    #operators{
-        color: purple;
-    }
-    #ac{
-        width: 120px;
-        text-align: center;
-        color: purple;
-    }
-</style>
 <body>
-
-<div class="container">
-    <div class="output">
+<div id="container" class="container">   
+    <button id="dark" onclick="dark()">
+         <img id="myImage" src="dark.png" alt="dark-mode" height="30px">
+    </button>
+    <div id="outPut" class="output">
         <h4 id="input">45+25</h4>
         <h4 id="output">66</h4>
     </div>
     <div class="digits">
-        <h5>9</h5>
-        <h5>8</h5>
-        <h5>7</h5>
-        <h5>6</h5>
-        <h5>5</h5>
-        <h5>4</h5>
-        <h5>3</h5>
-        <h5>2</h5>
-        <h5>1</h5>
-        <h5>0</h5>
-        <h5>.</h5>
-        <h5 id="operators">*</h5>
-        <h5 id="operators">-</h5>
-        <h5 id="operators">+</h5>
-        <h5 id="operators">/</h5>
-        <h5 id="operators">=</h5>
-        <h5 id="ac">AC</h5>
+        <button>9</button>
+        <button>8</button>
+        <button>7</button>
+        <button>6</button>
+        <button>5</button>
+        <button>4</button>
+        <button>3</button>
+        <button>2</button>
+        <button>1</button>
+        <button>0</button>
+        <button>.</button>
+        <button id="operators">*</button>
+        <button id="operators">-</button>
+        <button id="operators">+</button>
+        <button id="operators">/</button>
+        <button id="operators">=</button>
+        <button id="clear">AC</button>
     </div>
     
    
 </div>
     <script>
 
+        function dark() {
+            
+           var sheets = document.getElementsByTagName('link');
+           sheets[0].href = 'dark.css';
 
-
-
-    function addition(params) {
-        return a + b;
-    }
+            //to change the image
+            const display = document.getElementById("myImage");
+            if (display) {
+                document.getElementById('myImage').src='sun.png';
+            } 
+        }
     </script>
 </body>
 </html>

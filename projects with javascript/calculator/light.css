@@ -1,12 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
+body{
     display: grid;
     align-items: center;
     align-content: center;
@@ -96,50 +88,3 @@
         text-align: center;
         color: purple;
     }
-</style>
-<body>
-<div id="container" class="container">   
-    <button id="dark" onclick="dark()">
-         <img id="myImage" src="dark.png" alt="dark-mode" height="30px">
-    </button>
-    <div id="outPut" class="output">
-        <h4 id="input">45+25</h4>
-        <h4 id="output">66</h4>
-    </div>
-    <div class="digits">
-        <button>9</button>
-        <button>8</button>
-        <button>7</button>
-        <button>6</button>
-        <button>5</button>
-        <button>4</button>
-        <button>3</button>
-        <button>2</button>
-        <button>1</button>
-        <button>0</button>
-        <button>.</button>
-        <button id="operators">*</button>
-        <button id="operators">-</button>
-        <button id="operators">+</button>
-        <button id="operators">/</button>
-        <button id="operators">=</button>
-        <button id="clear">AC</button>
-    </div>
-    
-   
-</div>
-    <script>
-
-        const input =  document.getElementById('input');
-        const output =  document.getElementById('output');
-
-    
-        
-        function dark() {
-            //to change the body
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
-    </script>
-</body>
-</html>
