@@ -109,82 +109,69 @@
     </button>
     <div id="outPut" class="output">
         <div data-previous-Number class="previousNumber"></div>
-        <div data-current-Number class="currentNumber"></div>
+        <div data-current-Number id="currentNumber"></div>
+        <div data-current-Number id="result"></div>
     </div>
     <div class="digits">
-        <button data-number-button>9</button>
-        <button data-number-button>8</button>
-        <button data-number-button>7</button>
-        <button data-number-button>6</button> 
-        <button data-number-button>5</button>
-        <button data-number-button>4</button>
-        <button data-number-button>3</button>
-        <button data-number-button>2</button>
-        <button data-number-button>1</button>
-        <button data-number-button>0</button>
-        <button data-operator-button>*</button>
-        <button data-operator-button>-</button>
-        <button data-operator-button>+</button>
-        <button data-operator-button>/</button>
-        <button data-equal>=</button>
+        <button id="number9" onclick="getValue('number9')">9</button>
+        <button id="number8" onclick="getValue('number8')">8</button>
+        <button id="number7" onclick="getValue('number7')">7</button>
+        <button class="number">6</button> 
+        <button class="number">5</button>
+        <button class="number">4</button>
+        <button class="number">3</button>
+        <button class="number">2</button>
+        <button class="number">1</button>
+        <button class="number">0</button>
+        <button id="operator1" onclick="getOpertor('operator1')">*</button>
+        <button id="operator2" onclick="getOpertor('operator2')">-</button>
+        <button id="operator3" onclick="getOpertor('operator3')">+</button>
+        <button id="operator4" onclick="getOpertor('operator4')">/</button>
+        <button id="equal" onclick="result('equal')">=</button>
         <button id="clearButton" data-clear>AC</button>
     </div>
     
    
 </div>
     <script>
-        class calculator{
-            constructor(previousOperandText, currentOperandText){
-                this.previousOperandText = previousOperandText;
-                this.currentOppreviousOperandText = currentOppreviousOperandText;
-                this.clear();
+        let operatorClickedG;
+        let numberClickedFirst = '', numberClickedSecond = '';
+        let showNp;
+        
+        function getValue(idName) {
+            const numberClicked = document.getElementById(idName).innerHTML.trim();
+            showNp = document.getElementById('currentNumber').innerHTML;
+            if(numberClickedFirst == '') {
+                numberClickedFirst = numberClicked;
+                document.getElementById('currentNumber').innerHTML = numberClickedFirst + ' ';
+                console.log(numberClickedFirst)
+            } else {
+                numberClickedSecond = numberClicked;
+                document.getElementById('currentNumber').innerHTML = showNp + numberClickedSecond;
+                console.log(numberClickedSecond)
+            }
 
-            }
-            //for the clear button 
-            clear(){
-                this.previousOperand = '';
-                this.currentOperand = '';
-                this.operation = undefined;
-            }
-            //for the equal sign 
-            equal(){
+            
+            
+        }
+    
+        function getOpertor(idName){
+            showNp = document.getElementById('currentNumber').innerHTML;
+            operatorClickedG = document.getElementById(idName).innerHTML;
+            document.getElementById('currentNumber').innerHTML = showNp + operatorClickedG + ' ';
+            console.log(operatorClickedG)
+        }
+        function result(idName){
+             
+            //const result = document.getElementById('idName').innerHTML;
+            if(operatorClickedG == "*") {
+                let str = parseInt(numberClickedFirst) * parseInt(numberClickedSecond)
+                console.log(str);
+                document.getElementById('result').innerHTML = str;
 
-            }
-            //show the number seclected adds it to the screen 
-            showNumber(number){
-                this.currentOperand = number;
-            }
-            //choose an operator
-            chooseOperation(operation){
-                 
-            }
-            //compute the numbers together 
-            compute(){
-
-            }
-            //so our numbers will be constant updated 
-            updateDisplay(){
-                this.currentOperandText.innerText = this.currentOperand  
             }
         }
-        //used for mutiple button with the same data attributes 
-        const numberButtons = document.querySelectorAll([data-number-button])
-        const operatorButtons = document.querySelectorAll([data-operator-button])
-
-        //document.querySelector used for single button
-        const equalButtons =  document.querySelector([data-equal);
-        const clearButtons =  document.querySelector([data-clear]);
-        const previousOperandText =  document.querySelector([data-previousNumber]);
-        const currentOperandText  =  document.querySelector([data-currentNumber]);
-        
-        const calculator = new calculator(previousOperandText, currentOperandText)
-
-        numberButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                calculator.showNumber(button.innerText)
-                calculator.updateDisplay()
-            })
-        })
+     
     </script>
 </body>
 </html>

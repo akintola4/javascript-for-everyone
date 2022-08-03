@@ -80,6 +80,10 @@ body{
     cursor: pointer;
     text-align: center;
     }
+    button:hover{
+        background-color: rgb(98, 54, 98);
+        color: white;
+    }
     #operators{
         color: purple;
     }
