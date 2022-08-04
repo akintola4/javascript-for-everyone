@@ -152,9 +152,15 @@
                 document.getElementById('currentNumber').innerHTML = numberClickedFirst + operatorClickedG + numberClickedSecond;
                 console.log(numberClickedSecond)
             }
+        }
 
-            
-            
+        function updateDisplay(){
+
+            if (numberClickedFirst == numberClicked && numberClickedSecond == numberClickedSecond ) {
+                doc
+            } else {
+                
+            }
         }
     
         function getOpertor(idName){
@@ -191,8 +197,14 @@
         function allClear() {
             // numberClickedFirst = "";
             // numberClickedSecond = " work";
-            document.getElementById("currentNumber").innerHTML= "";
-            document.getElementById("result").innerHTML= "";
+            // document.getElementById("currentNumber").innerHTML= "";
+            // numberClickedFirst = '';
+            // console.log(numberClickedFirst)
+            // document.getElementById("result").innerHTML= "";
+            // numberClickedSecond = ''
+            // console.log(numberClickedSecond);
+            // location.reload();
+            this.numberClickedFirst = '';
         }
 
     </script>
