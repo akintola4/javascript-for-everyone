@@ -172,12 +172,12 @@
         const operatorButtons = document.querySelectorAll([data-operator-button])
 
         //document.querySelector used for single button
-        const equalButtons =  document.querySelector([data-equal);
+        const equalButtons =  document.querySelector([data-equal]);
         const clearButtons =  document.querySelector([data-clear]);
         const previousOperandText =  document.querySelector([data-previousNumber]);
         const currentOperandText  =  document.querySelector([data-currentNumber]);
         
-        const calculator = new calculator(previousOperandText, currentOperandText)
+        calculator = new calculator(previousOperandText, currentOperandText)
 
         numberButtons.forEach(button => {
             button.addEventListener('click', () => {
