@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link id="theme" type="text/css" rel="stylesheet" href="light.css">
+    
 </head>
 
 <body>
@@ -12,45 +13,161 @@
     <button id="dark" onclick="dark()">
          <img id="myImage" src="dark.png" alt="dark-mode" height="30px">
     </button>
-    <div id="outPut" class="output">
-        <h4 id="input">45+25</h4>
-        <h4 id="output">66</h4>
+    <input id="outPut" type="text" name="" class="calculator-screen" value="" disabled>
+    <div class="calculator-keys">
+        <button type="button" value="9">9</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="7">7</button>
+        <button type="button" value="6">6</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="4">4</button>
+        <button type="button" value="3">3</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="1">1</button>
+        <button type="button" value="0">0</button>
+        <button type="button" class="decimal" value=".">.</button>
+        <button type="button" class="operator" value="*">*</button>
+        <button type="button" class="operator" value="-">-</button>
+        <button type="button" class="operator" value="+">+</button>
+        <button type="button" class="operator" value="/">/</button>
+        <button type="button" class="equal-sign operator" value="=">=</button>
+        <button type="button" id="clear" class="all-clear" value="all-clear">AC</button>
     </div>
-    <div class="digits">
-        <button>9</button>
-        <button>8</button>
-        <button>7</button>
-        <button>6</button>
-        <button>5</button>
-        <button>4</button>
-        <button>3</button>
-        <button>2</button>
-        <button>1</button>
-        <button>0</button>
-        <button>.</button>
-        <button id="operators">*</button>
-        <button id="operators">-</button>
-        <button id="operators">+</button>
-        <button id="operators">/</button>
-        <button id="operators">=</button>
-        <button id="clear">AC</button>
-    </div>
-    
    
 </div>
-    <script>
-
-        function dark() {
-            
-           var sheets = document.getElementsByTagName('link');
-           sheets[0].href = 'dark.css';
-
-            //to change the image
-            const display = document.getElementById("myImage");
-            if (display) {
-                document.getElementById('myImage').src='sun.png';
-            } 
-        }
-    </script>
 </body>
+<script>
+    function dark() {
+            
+            var sheets = document.getElementsByTagName('link');
+            sheets[0].href = 'dark.css';
+         
+             //to change the image
+             const display = document.getElementById("myImage");
+             if (display) {
+                 document.getElementById('myImage').src='sun.png';
+             } 
+         }
+         const calculator = {
+            displayValue: '0',
+            firstOperand: null,
+            waitingForSecondOperand: false,
+            operator: null,
+         
+         
+         };
+         
+         function updateDisplay() {
+            const display = document.querySelector('.calculator-screen');
+            display.value = calculator.displayValue;
+         }
+         updateDisplay();
+         
+         
+         const keys = document.querySelector('.calculator-keys');
+         keys.addEventListener('click', event => {
+            const { target } = event;
+            const { value } = target;
+            if (!target.matches('button')) {
+                return;
+            }
+         
+            switch (value) {
+                case '+':
+                case '-':
+                case '*':
+                case '/':
+                case '=':
+                    handleOperator(value);
+                    break;
+                case '.':
+                    inputDecimal(value);
+                    break;
+                case 'all-clear':
+                    resetCalculator();
+                    break;
+                default:
+                    // check if the key is an integer
+                    if (Number.isInteger(parseFloat(value))) {
+                        inputDigit(value);
+                    }
+            }
+         
+            updateDisplay();
+         });
+         
+         function inputDigit(digit) {
+            const { displayValue, waitingForSecondOperand } = calculator;
+            if (waitingForSecondOperand === true) {
+                calculator.displayValue = digit;
+                calculator.waitingForSecondOperand = false;
+            } else {
+                calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+            }
+         
+            console.log(calculator);
+         }
+         
+         function inputDecimal(dot) {
+            if (calculator.waitingForSecondOperand === true) {
+                calculator.displayValue = '0.'
+                calculator.waitingForSecondOperand = false;
+                return
+            }
+            if (!calculator.displayValue.includes(dot)) {
+                calculator.displayValue += dot;
+            }
+         }
+         function handleOperator(nextOperator) {
+            const { firstOperand, displayValue, operator } = calculator
+            const inputValue = parseFloat(displayValue);
+            if (operator && calculator.waitingForSecondOperand) {
+                calculator.operator = nextOperator;
+                console.log(calculator);
+                return;
+            }
+            if (firstOperand == null && !isNaN(inputValue)) {
+                calculator.firstOperand = inputValue;
+         
+            } else if (operator) {
+                const result = calculate(firstOperand, inputValue, operator);
+         
+                calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+                calculator.firstOperand = result;
+            }
+         
+            calculator.waitingForSecondOperand = true;
+            calculator.operator = nextOperator;
+            console.log(calculator);
+         }
+         
+         
+         function calculate(firstOperand, secondOperand, operator) {
+            if (operator === "*") {
+                return firstOperand * secondOperand;
+         
+            }
+            else if (operator === "/") {
+                return firstOperand / secondOperand;
+         
+            }
+            else if (operator === "+") {
+                return firstOperand + secondOperand;
+         
+            }
+            else if (operator === "-") {
+                return firstOperand - secondOperand;
+         
+            }
+            return secondOperand;
+         }
+         function resetCalculator() {
+            calculator.displayValue = '0';
+            
+            calculator.firstOperand = null;
+            calculator.waitingForSecondOperand = false;
+            calculator.operator = null;
+            console.log(calculator);
+         }
+</script>
 </html>

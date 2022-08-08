@@ -1,4 +1,4 @@
-body{
+body {
     display: grid;
     align-items: center;
     align-content: center;
@@ -6,40 +6,51 @@ body{
     height: 100vh;
     justify-content: center;
     background-color: grey;
-        font-family: sans-serif;
-    }
+    font-family: sans-serif;
+}
 
-    .container{
-        width: 360px;
-        display: inline-block;
-        align-items: center;
-        align-content: center;
-        padding: 34px;
-        box-sizing: border-box;
-        border-radius: 40px;
-        background: white;
-    }
-    .cont{
-        width: 360px;
-        display: inline-block;
-        align-items: center;
-        align-content: center;
-        padding: 34px;
-        color: white;
-        box-sizing: border-box;
-        border-radius: 40px;
-        background: rgb(45, 45, 45);
-    }
-    #dark{
+.container {
+    width: 360px;
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    padding: 34px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background: white;
+}
+
+.cont {
+    width: 360px;
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    padding: 34px;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background: rgb(45, 45, 45);
+}
+
+#dark {
     border: none;
     background: none;
-    box-shadow:none;
+    box-shadow: none;
     position: relative;
     margin-left: 90%;
     cursor: pointer;
-    
-    }
-    .dark-mode{
+
+}
+
+.calculator-screen {
+    text-align: right;
+    font-size: larger;
+    border: none;
+    color: purple;
+
+}
+
+.dark-mode {
     display: grid;
     align-items: center;
     align-content: center;
@@ -48,26 +59,31 @@ body{
     justify-content: center;
     background-color: rgb(26 28 35);
     font-family: sans-serif;
-    }
-    .output{
-        background: rgb(255, 255, 255);
-        padding: 10px 40px;
-        color: purple;
-        width: 200px;
-        border-radius: 20px;
-        text-align: end;
-        box-shadow: inset 0px 2px 15px rgb(175 175 175 / 50%);
-    }
-    .digits{
-        display: flex;
-        flex-direction: row;
-        margin: 20px 0px;
-        flex-wrap: wrap;
-        color: black;
-        
-       justify-content: space-evenly;
-    }
-    button{
+}
+
+#output {
+    background: rgb(255, 255, 255);
+    padding: 10px 40px;
+    color: purple;
+    width: 300px;
+    font-size: large;
+    height: 50px;
+    border-radius: 20px;
+    text-align: end;
+    box-shadow: inset 0px 2px 15px rgb(175 175 175 / 50%);
+}
+
+.calculator-keys {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    color: black;
+
+    justify-content: space-evenly;
+}
+
+button {
     font-size: large;
     border: none;
     background: white;
@@ -79,16 +95,26 @@ body{
     width: 49px;
     cursor: pointer;
     text-align: center;
-    }
-    button:hover{
-        background-color: rgb(98, 54, 98);
-        color: white;
-    }
-    #operators{
-        color: purple;
-    }
-    #clear{
-        width: 260px;
-        text-align: center;
-        color: purple;
-    }
+}
+
+button:hover {
+    background-color: rgb(98, 54, 98);
+    color: white;
+}
+
+#operators {
+    color: purple;
+}
+
+#clear {
+    width: 260px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+#clear:hover{
+    color: white;
+}
+h2 {
+    color: purple;
+
+}
