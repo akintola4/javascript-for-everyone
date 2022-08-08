@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin: 0%;
+    height: 100vh;
+    justify-content: center;
+    background-color: grey;
+        font-family: sans-serif;
+    }
+
+    .container{
+        width: 360px;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        padding: 34px;
+        box-sizing: border-box;
+        border-radius: 40px;
+        background: white;
+    }
+    .cont{
+        width: 360px;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        padding: 34px;
+        color: white;
+        box-sizing: border-box;
+        border-radius: 40px;
+        background: rgb(45, 45, 45);
+    }
+    #dark{
+    border: none;
+    background: none;
+    box-shadow:none;
+    position: relative;
+    margin-left: 90%;
+    cursor: pointer;
+    
+    }
+    .dark-mode{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin: 0%;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgb(26 28 35);
+    font-family: sans-serif;
+    }
+    .output{
+        background: rgb(255, 255, 255);
+        padding: 10px 40px;
+        color: purple;
+        border: none;
+        width: 284px;
+        font-size: large;
+        height: 64px;
+        border-radius: 20px;
+        text-align: end;
+        box-shadow: inset 0px 0px 8px rgb(175 175 175 / 50%);
+    }
+    .digits{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px;
+        flex-wrap: wrap;
+        color: black;
+        
+       justify-content: space-evenly;
+    }
+    button{
+    font-size: large;
+    border: none;
+    background: white;
+    box-shadow: -1px 2px 13px 2px rgb(175 175 175 / 50%);
+    border-radius: 50px;
+    padding: 13px;
+    margin: 12px;
+    align-items: center;
+    width: 49px;
+    cursor: pointer;
+    text-align: center;
+    }
+    button:hover{
+        background-color: rgb(98, 54, 98);
+        color: white;
+    }
+    #operators{
+        color: purple;
+    }
+    #clear{font-size: large;
+    border: none;
+    background: white;
+    box-shadow: -1px 2px 13px 2px rgb(175 175 175 / 50%);
+    border-radius: 50px;
+    padding: 13px;
+    margin: 12px;
+    align-items: center;
+    cursor: pointer;
+    width: 260px;
+    text-align: center;
+    color: purple;
+    }
+    #clear:hover{
+        background-color: rgb(98, 54, 98);
+        color: white;
+    }
+    #keys{
+    font-size: large;
+    border: none;
+    background: white;
+    box-shadow: -1px 2px 13px 2px rgb(175 175 175 / 50%);
+    border-radius: 50px;
+    padding: 13px;
+    margin: 12px;
+    align-items: center;
+    width: 49px;
+    cursor: pointer;
+    text-align: center;
+    }
+    #keys:hover{
+        background-color: rgb(98, 54, 98);
+        color: white;
+    }
+</style>
+<body>
+<div id="container" class="container">   
+    <button id="dark" onclick="dark()">
+         <img id="myImage" src="dark.png" alt="dark-mode" height="30px">
+    </button>
+    <!-- <div id="outPut" class="output"> -->
+        <input class="output" id="box" type="button" value="" disabled>
+    <!-- </div> -->
+    <div class="digits">
+
+        <input type="button" id="keys" onclick="getValue('9')" value="9">
+        <input type="button" id="keys" onclick="getValue('8')" value="8">
+        <input type="button" id="keys" onclick="getValue('7')" value="7">
+        <input type="button" id="keys" onclick="getValue('6')" value="6"> 
+        <input type="button" id="keys" onclick="getValue('5')" value="5">
+        <input type="button" id="keys" onclick="getValue('4')" value="4">
+        <input type="button" id="keys" onclick="getValue('3')" value="3">
+        <input type="button" id="keys" onclick="getValue('2')" value="2">
+        <input type="button" id="keys" onclick="getValue('1')" value="1">
+        <input type="button" id="keys" onclick="getValue('0')" value="0">
+
+        <input type="button" id="keys" onclick="operation('=')" value="=">
+
+        <input type="button" id="keys" onclick="getValue('.')" value=".">
+        <input type="button" id="keys" onclick="getValue('*')" value="*">
+        <input type="button" id="keys" onclick="getValue('-')" value="-">
+        <input type="button" id="keys" onclick="getValue('+')" value="+">
+        <input type="button" id="keys" onclick="getValue('/')" value="/">
+        
+        <input type="button" id="clear" onclick="delete1('Ac')" value="AC">
+        
+    </div>
+</div>
+    <script>
+        
+            let x = document.getElementById('box')
+            let y = document.getElementById('box')
+            function getValue(x) {
+                box.value += x; 
+               
+                console.log(x)
+            }
+            function delete1(x) {
+                if (x === "Ac" ) {
+                    box.value = '';
+                }
+            }
+            function operation() {
+                x=box.value;
+                x=eval(x);
+                box.value=x;
+                console.log(x)
+            }
+            
+            // function equal(x, operator, y) {
+                
+            // }
+            
+    </script>
+</body>
+</html>
