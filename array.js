@@ -46,3 +46,26 @@ console.log(removedFromCarsLast);
 //we can use shift() to remove the first value
 const removedFromCarsFirst = cars.shift();
 console.log(removedFromCarsFirst);
+
+
+//muti-dimensional array
+
+const drum = [
+    [20,3,5],
+    [1,3,4],
+    ["tope", "jack", 123],
+    [[12,"roster",77], [223, "tosin", 78]]
+];
+//test1 single array or subarray
+const test1 = drum[1];
+console.log(test1)
+
+//test2 subarray
+const test2 = drum[3];
+console.log(test2)
+
+//test3 element of a subarray
+//we are selecting the thrid subarray then selecting the second nested subarray
+//then we select the second element
+const test3 = drum[3][1][1]
+console.log(test3)
