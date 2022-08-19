@@ -2,10 +2,10 @@
     "name": "http",
     "version": "1.0.0",
     "description": "",
-    "main": "test.js",
+    "main": "error.js",
     "scripts": {
-        "start": "node test.js",
-        "dev": "nodemon test.js"
+        "start": "node error.js",
+        "dev": "nodemon error.js"
     },
     "keywords": [],
     "author": "",
