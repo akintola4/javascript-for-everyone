@@ -1,0 +1,16 @@
+{
+    "name": "http",
+    "version": "1.0.0",
+    "description": "",
+    "main": "url.js",
+    "scripts": {
+        "start": "node url.js",
+        "dev": "nodemon url.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.19"
+    }
+}
