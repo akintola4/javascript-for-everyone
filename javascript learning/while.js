@@ -18,12 +18,12 @@ while (test) {
     test = false;
 }
 
-var index= 0;
+var index = 0;
 //we can pritn out the elements of an array using while loop
-while (index < names.length ) {
+while (index < names.length) {
     console.log(names[index])
- 
-    index= index + 2; 
+
+    index = index + 2;
 }
 
 //do while
