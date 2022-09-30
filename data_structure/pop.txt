@@ -1,7 +1,7 @@
-markoto james 27 male single
-akintola foster 21 female married
-marfule drake 23 female single
-derree thomus 24 male married
-great tower 26 female single
-donalde james 67 female married
-buokus tosin 17 male married
+markoto james   27  male    single
+akintola foster 21  female  married
+marfule drake   23  female  single
+derree thomus   24  male    married
+greater tower   26  female  single
+donalde james   67  female  married
+buokus tosin    17  male    married
