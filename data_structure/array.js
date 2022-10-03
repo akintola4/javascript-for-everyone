@@ -69,3 +69,9 @@ console.log(test2)
 //then we select the second element
 const test3 = drum[3][1][1]
 console.log(test3)
+
+//we can also use the join method to join an array together 
+console.log(cars.join("-"))
+
+
+//
