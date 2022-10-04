@@ -112,3 +112,56 @@ console.log(countOnline(website));
 //param is the name of the object
 let test2 = Object.keys(website)
 console.log(test2)
+
+
+//also objects can have methods in them
+//methods are properties that are functions
+
+let drone = {
+    name:"frosty",
+    proppeler: 4,
+    sayname: function(){console.log( `The drone name is ${this.name}.`)}
+}
+drone.sayname()
+
+//objects constructor
+//this are functions that createn new objects 
+//this inside the constructor always refers to the object being created.
+function Cat(name, color)//using the this we can extend the constructor
+//to receive arguments
+{
+    this.name=name;//own property
+    this.color=color;
+}
+
+//also we should stop data reducency in our code how 
+//using the prototype keyword  
+Cat.prototype.numLegs = 4;//prototype property
+
+//the new keyword is used when calling a constructor
+// and tells js to create a new instance of of the constructor
+
+let cattie = new Cat("cattly","gray")//we pass a new information into our new 
+//object called cattie
+//creates a new object for cattie with the information from cat
+console.log(cattie)
+ 
+//we can also chcek if an object is an instance of a constructor using
+//instanceof keyword 
+//we either get true or false
+console.log(cattie instanceof Cat)
+console.log(cattie.numLegs)
+//we can also check the propertise in cattie
+//using the .hasOwnProperty keyword
+let ownProperty = []
+let prototypeProperty = []
+for(let property in cattie){
+    if(cattie.hasOwnProperty(property)){
+        ownProperty.push(property)
+    }else{
+        //we can also chcek the prototype properties
+        prototypeProperty.push(property)
+    }
+}
+console.log(ownProperty)
+console.log(prototypeProperty)
