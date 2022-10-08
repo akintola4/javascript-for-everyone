@@ -137,7 +137,24 @@ function Cat(name, color)//using the this we can extend the constructor
 //also we should stop data reducency in our code how 
 //using the prototype keyword  
 Cat.prototype.numLegs = 4;//prototype property
-
+//a better way for adding prototypes is by combining them all 
+Cat.prototype ={
+    //always remeber to put the constructor
+    constructor: Cat,
+    numLegs:4,
+    eyes: 2,
+    eyescolor: "gold",
+//we can also add methods this way 
+    speak: function(){
+        console.log("mel melo")
+    },
+    eat: function(){
+        console.log("yum yum")
+    },
+    jump: function(){
+        console.log("I am jumping")
+    }
+}
 //the new keyword is used when calling a constructor
 // and tells js to create a new instance of of the constructor
 
@@ -165,3 +182,29 @@ for(let property in cattie){
 }
 console.log(ownProperty)
 console.log(prototypeProperty)
+
+//we can also  use .isPrototypeOf to check if cattie obtained the prototype of cat
+
+console.log(Cat.prototype.isPrototypeOf(cattie))
+
+//we can also check if a object is a Prototype
+
+console.log(Object.prototype.isPrototypeOf(Cat.prototype))
+
+//we can also rewrite the information from a method we put in a new instance 
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+let bird = new Bird()
+console.log(bird.fly())
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+//here i changed the parent prototype return value to a new child prototype 
+Penguin.prototype.fly = function(){
+  {return "Alas, this is a flightless bird."}
+}
+
+let penguin = new Penguin();
+console.log(penguin.fly());

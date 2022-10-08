@@ -9,3 +9,4 @@ console.log(userName);
 // we can also change the element in an array 
 firstArray[2] = "location";
 console.log(firstArray[2])
+

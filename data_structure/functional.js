@@ -30,7 +30,10 @@ console.log(female)
 var usernames = users.map((u) => (u.name + "age is " + u.age))
 console.log(usernames)
 
-var age = users.map((user) => (user.age))
+var age = users.map((user) => ({
+    Age:user.age,
+    Name:user.name
+}))
 console.log(age)
 
 //reduce high order function

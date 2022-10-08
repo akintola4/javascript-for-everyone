@@ -52,3 +52,12 @@ let houses= [0,1,2,3,4,5,6,7,8,9,10];
 let houseNumber= houses.slice(3,9)//here we going to copy [4,5,6,7,8]
 //it wont copy the end index at 9
 console.log(houseNumber)//output it in our console
+
+
+//we can also combine two arrays together 
+//using concat to combine array without mutating them 
+
+console.log(houses.concat(arr))
+
+//reduce method 
+//
