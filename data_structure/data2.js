@@ -131,7 +131,7 @@ function chcekHigher(arr) {
 
 chcekHigher([1, 2, 3, 9, 10, 5]);
 
-      //Currying
+      //Currying i will explain more when i use it on my api project
       //this collects a function has a parameter 
       function sub(x) {
         return function(y) {
