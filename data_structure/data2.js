@@ -82,14 +82,14 @@ function sentensify(str) {
 sentensify("May-the-force-be-with-you");
 
 //
-// Only change code below this line
+// here we test some of the knowledge we have gained over the past
 function urlSlug(title) {
 
     let newArray = title.toLowerCase().trim().split(/\s+/)
     console.log(newArray)
     console.log(newArray.join("-"))
 }
-// Only change code above this line
+
 urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
 urlSlug(" Winter Is  Coming")
 
@@ -117,8 +117,8 @@ checkPositive([1, 2, 3, -4, 5]);
 
 function chcekHigher(arr) {
     //create a new variable to store the value
-    //the every method uses a function as a callback 
-    let test = arr.every(function (currentValue) {
+    //the some method uses a function as a callback 
+    let test = arr.some(function (currentValue) {
         if (currentValue > 10) {
             console.log(true)
         } else {
