@@ -15,11 +15,16 @@ The values should be rounded to the nearest whole number. The body being orbited
 
 The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km3s-2.
 */
-
 function orbitalPeriod(arr) {
-    const GM = 398600.4418;
-    const earthRadius = 6367.4447;
-    return arr;
-  }
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+  console.log( arr.map(p => {
+    return {
+      name: p.name,
+      orbitalPeriod: Math.round(2 * Math.PI * Math.sqrt(Math.pow((p.avgAlt + earthRadius), 3) / GM ))
+    }
+  }))
+}
   
   orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+  orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}])
