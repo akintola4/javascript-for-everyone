@@ -11,5 +11,5 @@ var content = document.getElementById("content")
         content: content.value,
     }
 
-    window.localStorage.setItem(key, JSON.stringify(report))
+    window.localStorage.setItem(key.value, JSON.stringify(report))
 }
