@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+    background-color: #1F2933;
+    margin: 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    
+}
+
+a {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    background-color: #353e47;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+    border-radius: 20px;
+    width: 40%;
+
+    margin: 0 auto;
+}
+#title{
+    font-size: 12px;
+}
+#adviceNumber{
+    color: rgb(28, 255, 3);
+}
+p{
+    font-size: 1.5em;
+    color: rgb(28, 255, 3);
+}
+.deco{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5%;
+}
+hr{
+    size: 50px;
+    width: 40%;
+}
+button{
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 2%;
+    border-radius: 100%;
+    cursor: pointer;
+}
+h4{
+    padding-bottom: 0;
+    font-size: 12px;
+}
+@media (max-width:900px){
+    .container {
+        width: 50%;
+        padding: 5%;
+    }
+    p{
+        font-size: 1em;
+       
+        color: rgb(28, 255, 3);
+    }
+    .deco{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 5%;
+    }
+    hr{
+        size: 20px;
+        width: 30%;
+    }
+    button{
+        font-size: 15px;
+       
+    }
+}
