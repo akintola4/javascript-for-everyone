@@ -4,11 +4,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="">
         <h4>SWIES FORM</h4>
-        <input type="text" name="" id="">
+
+        <input id="key" placeholder="Matric Number" type="text" name="" id="">
+        <input type="text" placeholder="Name" id="username">
+        <input type="email" name="" placeholder="Email" id="email">
+        <textarea name="" id="content" cols="10" rows="10" placeholder="tell us about your swies..."></textarea>
+        <input onclick="store()" id="submit"type="submit" value="Submit">
     </form>
 </body>
+<script src="./app.js"></script>
 </html>

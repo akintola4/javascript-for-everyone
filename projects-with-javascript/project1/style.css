@@ -1,4 +1,43 @@
 body{
     font-family: sans-serif;
-    
+    background-color: #1F2933;
+    margin: 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+a{
+    color: #fff;
+}
+form{
+    display: flex;
+    background-color: #353e47;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+    border-radius: 20px;
+    width: 30%;
+
+    margin: 0 auto;
+}
+h4{
+    font-size: 30px;
+    text-justify: newspaper;
+}
+input{
+text-align: center;
+width: 80%;
+border: 1px solid #fff;
+border-radius: 20px;
+padding: 2%;
+margin: 4% 0;
+}
+#submit{
+    background-color: #059900;
+    border: 1px solid #059900;
+    width: 25%;
+    cursor: pointer;
 }
