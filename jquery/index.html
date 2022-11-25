@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+      $("#target1").css("color", "red");
+      $("#target1").prop("disabled", true);
+      $("#target4").remove();
+      $("#target2").appendTo("#right-well");
+      $("#target5").clone().appendTo("#left-well");
+      $("#target1").parent().css("background-color", "red");
+      $("#right-well").children().css("color", "orange");
+      $("#left-well").children().css("color", "green");
+      $(".target:nth-child(2)").addClass("animated bounce");
+      $(".target:even").addClass("animated shake");
+  $("body").addClass("animated hinge")
+    });
+  </script>
+<body>
+      <!-- Only change code above this line -->
+      
+      <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>#left-well</h4>
+            <div class="well" id="left-well">
+              <button class="btn btn-default target" id="target1">#target1</button>
+              <button class="btn btn-default target" id="target2">#target2</button>
+              <button class="btn btn-default target" id="target3">#target3</button>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <h4>#right-well</h4>
+            <div class="well" id="right-well">
+              <button class="btn btn-default target" id="target4">#target4</button>
+              <button class="btn btn-default target" id="target5">#target5</button>
+              <button class="btn btn-default target" id="target6">#target6</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
