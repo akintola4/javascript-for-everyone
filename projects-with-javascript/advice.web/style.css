@@ -24,7 +24,7 @@ a {
     align-items: center;
     border-radius: 20px;
     width: 40%;
-
+    box-shadow: 1px 0px 20px 5px rgb(0 247 255 / 50%);
     margin: 0 auto;
 }
 #title{

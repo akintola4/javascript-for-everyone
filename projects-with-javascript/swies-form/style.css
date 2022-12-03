@@ -55,3 +55,11 @@ textarea{
     color: #fff;
     font-size: 1.1rem;
 }
+@media (max-width:900px) {
+    form{
+        width: 70%;
+    }
+    #submit{
+        width: 30%;
+    }
+}
