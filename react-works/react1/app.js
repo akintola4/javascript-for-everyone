@@ -1,3 +1,19 @@
+const navbar = (
+    <nav>
+        <h1>React DOC</h1>
+        <ul>
+        <li>Menu</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    </nav>
+    
+)
+
+ReactDOM.render(
+    navbar, document.getElementById("nav")
+)
+
 ReactDOM.render(<h1>Hello my Name is akintola tope</h1>, document.getElementById("root"))
 ReactDOM.render(<h2>My first react project</h2>, document.getElementById("root2"))
 ReactDOM.render(<p>getting started with react!</p>, document.getElementById("root3"))
