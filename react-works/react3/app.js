@@ -39,7 +39,7 @@ function MainContent() {
 
 function Footer() {
     return (
-        <footer>©️ 20xx Akintola Tope Akinfolarin development All rights reserved</footer>
+        <footer className="footer">©️ 20xx Akintola Tope Akinfolarin development All rights reserved</footer>
     )
 }
 function Content() {
