@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <nav></nav>
+    <div class="side-bar">
+        <i class="fa-add" onclick=""></i>
+    </div>
+    <div class="title"></div>
+    <div class="editor">
+        <input type="text" name="title" placeholder="title" id="title">
+        <textarea name="" id="note" cols="30" rows="10"></textarea>
+        <input type="submit" value="Create"  onclick="create()">
+        <input type="submit" value="update"  onclick="update()">
+    </div>
+    <div class="notes">
+        <input type="text" name="title" id="key">
+        <input type="submit" value="retrive" onclick="retrive()">
+        <input type="submit" value="Delete"  onclick="remove()">
+    </div>
+
+    <div>
+        <h1 id="noteTitle"></h1>
+        <p id="noteCreated"></p>
+    </div>
+
+    <footer></footer>
 </body>
 <script src="app.js"></script>
 </html>
