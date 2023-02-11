@@ -12,3 +12,7 @@ npx create-react-app nameofapp
 
 ## to start a local host and start your react project
 npm start 
+
+
+## to create a production build 
+npm run build
