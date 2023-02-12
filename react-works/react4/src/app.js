@@ -1,9 +1,9 @@
+import React from "react";
 import MainContent from "./Component/MainContent";
 import Nav from "./Component/Nav"
-
-function Content() {
+export default function App() {
     return(
-        <div>
+        <div className="container">
             <Nav />
             <MainContent />
         </div>
