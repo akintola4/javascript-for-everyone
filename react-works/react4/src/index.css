@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    color: #fff;
+    font-family: inter;
+    background-color: rgb(40, 45, 53);
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    background-color: #21222A;
+    align-items: center;
+    padding: 30px 25px;
+    justify-content: space-between;
+
+}
+.logoSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #61DAFB;
+}
+.logoName{
+    font-size: 30px;
+    font-weight: 700;
+}
+.logo{
+    width: 100px;
+}
+.nav-items{
+    color: #DEEBF8;
+}
+.mainContent{
+    padding: 2%;
+}
+.contentName{
+    font-size: 50px;
+}
+.contentList{
+    list-style: none;
+}
+.contentList li::before{
+    content: "\2022";
+    color: #61DAFB;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.contentList li{
+    font-size: 16;
+}
