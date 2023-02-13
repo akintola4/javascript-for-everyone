@@ -7,10 +7,7 @@ export default function Nav() {
                 <img className="logo" src= {logo}  alt="react logo" />
                 <h2 className="logoName">ReactFacts</h2>
             </div>
-
-            <ul className="nav-items">
-                <h3>React Fun Facts</h3>
-            </ul>
+                <h3 className="nav-items">React Fun Facts</h3>
         </nav>
     )
 }

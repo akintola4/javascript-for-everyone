@@ -12,7 +12,7 @@ body{
     flex-direction: row;
     background-color: #21222A;
     align-items: center;
-    padding: 30px 25px;
+    padding: 2%;
     justify-content: space-between;
 
 }
@@ -23,7 +23,7 @@ body{
     color: #61DAFB;
 }
 .logoName{
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 700;
 }
 .logo{
@@ -31,12 +31,17 @@ body{
 }
 .nav-items{
     color: #DEEBF8;
+    max-width: fit-content;
 }
 .mainContent{
-    padding: 2%;
+    padding: 5%;
+    height: 80vh;
+    background-image: url(./images/logo2.png);
+    background-repeat: no-repeat;
+    background-position: right;
 }
 .contentName{
-    font-size: 50px;
+    font-size: 39px;
 }
 .contentList{
     list-style: none;
@@ -45,10 +50,15 @@ body{
     content: "\2022";
     color: #61DAFB;
     font-weight: bold;
+    font-size: 30px;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
 .contentList li{
     font-size: 16;
+    line-height: 19px;
+    padding-block: 10px;
+    /* padding blocks allows me to edit on the padding of the bottom and top */
+    max-width: fit-content;
 }
