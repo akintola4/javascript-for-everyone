@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: inter;
+    background-color: rgb(40, 45, 53);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    background-color: #21222A;
+    align-items: center;
+    padding: 1%;
+    height: 10vh;
+    justify-content: space-between;
+
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #61DAFB;
+}
+
+.logoName {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-items {
+    color: #DEEBF8;
+    max-width: fit-content;
+}
+
+.container {
+    height: 100vh;
+}
+
+.mainContent {
+    margin: 0;
+    background-color: #1A1B21;
+    height: 85vh;
+    padding:1% 5%;
+}
+
+.title {
+    text-align: center;
+}
+
+.profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px
+}
+.email{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    height: 30px;
+    width: 60%;
+    background-color: #fff;
+}
+.email-logo{
+    width: 100px;
+}
+.about{
+    text-align: justify;
+}
+.interest{
+    text-align: justify;
+}
+.footer {
+    background-color: #161619;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 40px;
+}
