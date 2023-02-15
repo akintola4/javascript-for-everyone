@@ -2,7 +2,7 @@
 export default function MainContent() {
     return (
         <main className="mainContent">
-            <img className="profile" src={require("../images/avatar2.png")} alt="profilepicture" />
+            <img className="profile " src={require("../images/avatar2.png")} alt="profilepicture" />
             <div className="title">
                 <h1 className="title-1">Akintola Tope</h1>
                 <h4 className="title-2">Software enginer</h4>
@@ -16,7 +16,7 @@ export default function MainContent() {
             </div>
             <div className="interest">
                 <h3>Interest</h3>
-                <p>I also have a keen interest in new technologies such as Blockchain, AI, VR/AR, Cloud, Cyber Security, and Cryptocurrency.</p>
+                <p>I also have a keen interest in new technologies such as Blockchain, AI, VR/AR, Cloud, Cyber Security,Data science, and Cryptocurrency.</p>
             </div>
         </main>
     )
