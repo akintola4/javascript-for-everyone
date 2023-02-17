@@ -5,7 +5,7 @@
 body {
     margin: 0;
     color: #000;
-    font-family: inter;
+    font-family: 'poppins';
     background-color: #fff;
 }
 
@@ -41,34 +41,71 @@ body {
 }
 .hero{
     padding:2% 5%;
-    
+    display: flex;
+    flex-direction: column;
    
 }
 .hero1{
-    width: 50%;
-    display: block;
+    max-width: 40%;
+    align-items: center;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-text >h1{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 50px;
-    margin-bottom: 0;
+    margin-bottom: 16px;
 }
 .hero-text > p{
     font-weight:200;
     font-size: 20px;
+    margin-top: 0;
 }
 .container {
     height: 100vh;
 }
+.card{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+.Card1{
+    display: flex;
+    flex-direction: column;
+}
+.card-image{
+    width: 236px;
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
 
-.mainContent {
+}
+.card-text-1{
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+.card-text-1 > p{
     margin: 0;
-    padding:1% 5%;
+    padding-left: 10px;
 }
 
+.card-text-2 > p{
+    margin: 0;
+}
+.card-text-3{
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+.card-text-3 > h2{
+    margin: 0;
+}
 @media screen and (maxwidth:900px) {
     .hero1{
         width: 10px;
