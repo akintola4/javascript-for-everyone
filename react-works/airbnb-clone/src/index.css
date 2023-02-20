@@ -73,10 +73,11 @@ body {
 }
 .Card1{
     display: flex;
+    width: 150px;
     flex-direction: column;
 }
 .card-image{
-    width: 236px;
+    width: 100%;
 }
 .card-text{
     display: flex;
