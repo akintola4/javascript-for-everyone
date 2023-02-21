@@ -4,111 +4,59 @@
 
 body {
     margin: 0;
-    color: #000;
-    font-family: 'poppins';
-    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: whitesmoke;
 }
-
-.navigation {
+.conatainer{
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 2.98px 7.46px 0px #e1e1e1;
-    align-items: center;
-    padding: 1%;
-    height: 10vh;
-    justify-content: space-between;
-
 }
-
-.logoSection {
+.contacts {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #FF5A5F;
-}
-.logo {
-    width: 100px;
-    margin-right: 10px;
-}
-.logoName {
-    font-size: 22px;
-    font-weight: 700;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-.nav-items {
-    color: #df7f82;
-    max-width: fit-content;
-}
-.hero{
-    padding:2% 5%;
+.contact-card {
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-   
-}
-.hero1{
-    max-width: 40%;
-    align-items: center;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 13px;
+    padding-bottom: 20px;
+    background-color: white;
 }
 
-.hero-text >h1{
-    font-weight: 600;
-    font-size: 50px;
-    margin-bottom: 16px;
-}
-.hero-text > p{
-    font-weight:200;
-    font-size: 20px;
-    margin-top: 0;
-}
-.container {
-    height: 100vh;
-}
-.card{
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-}
-.Card1{
-    display: flex;
-    width: 150px;
-    flex-direction: column;
-}
-.card-image{
+.contact-card > img {
     width: 100%;
-}
-.card-text{
-    display: flex;
-    flex-direction: column;
-
-}
-.card-text-1{
-    display: flex;
-    padding-top: 10px;
-    flex-direction: row;
-    align-items: center;
-}
-.card-text-1 > p{
-    margin: 0;
-    padding-left: 10px;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
-.card-text-2 > p{
-    margin: 0;
+.contact-card > h3 {
+    font-weight: 700;
+    font-size: 18px;
 }
-.card-text-3{
+
+.info-group {
     display: flex;
-    padding-top: 10px;
-    flex-direction: row;
     align-items: center;
 }
-.card-text-3 > h2{
-    margin: 0;
+
+.info-group > img {
+    height: 11px;
+    margin-right: 8px;
 }
-@media screen and (maxwidth:900px) {
-    .hero1{
-        width: 10px;
-    }
+
+.info-group > p {
+    margin-block: 3px;
+    font-size: 12px;
+    color: #2B283A;
 }
