@@ -16,4 +16,5 @@ export default function Contact(props) {
         </div>
         </div>
     )
-}
+ }
+// props are a major part of react and they are objects
