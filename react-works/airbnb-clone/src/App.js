@@ -3,21 +3,25 @@ import Card from "./Component/Card";
 import Nav from "./Component/Nav"
 import Hero from "./Component/Hero";
 export default function App() {
-    const information =  data.map((info)=>{
-        return 
+    const card = data.map((info) => {
+        return <Card
+        //{require("../images/avatar.png")}
+            img= {info.img}
+            rating={info.stats.rating}
+            reviewCount={info.stats.reviewCount}
+            country={info.country}
+            title={info.title}
+            price={info.price}
+        />
     })
-    return(
+    return (
         <div className="container">
             <Nav />
             <Hero />
-            <Card 
-            img={require("./images/avatar.png")}
-            rating={5.0}
-            reviewCount={6}
-            country="USA"
-            title="Life lessons with Katie Zaferes"
-            price={136}
-            />
+            <div className="card-section">
+            {card}
+            </div>
+            
         </div>
     )
 }

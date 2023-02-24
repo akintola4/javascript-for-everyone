@@ -20,7 +20,13 @@ body {
     flex-wrap: wrap;
     gap: 40px;
 }
-
+.card-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
 .contact-card {
     flex-basis: 225px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
