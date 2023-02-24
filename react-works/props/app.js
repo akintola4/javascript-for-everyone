@@ -17,3 +17,8 @@ function Time() {
     )
 }
 ReactDOM.render(Time(), document.getElementById("root"))
+
+//you also use numbers and array in props
+//using the {} to tell jsx it is js we trying to pass in
+//number phone={08060461839}
+//array {[title:"learning javascript", author:"foster", date:"20-12-2001"]}
