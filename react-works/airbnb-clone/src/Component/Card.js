@@ -15,7 +15,11 @@ export default function Card(props) {
                 </div>
                 <div className="card-text-3">
                     <h2>From ${props.price}</h2>
+<<<<<<< HEAD
                     <p> / person</p>
+=======
+                    <p>/ person</p>
+>>>>>>> refs/remotes/origin/main
                 </div>
                 </div>
             </div>
