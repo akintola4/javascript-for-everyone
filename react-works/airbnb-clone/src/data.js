@@ -26,6 +26,7 @@ export default [
             country: "Online",
             openSpots: 27,
         },
+        
         {
             id: 3,
             title: "Group Mountain Biking",

@@ -46,7 +46,7 @@ body {
    
 }
 .hero1{
-    max-width: 40%;
+    max-width: 100%;
     align-items: center;
     display: flex;
     margin-left: auto;
@@ -68,23 +68,33 @@ body {
 }
 .card-section{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    
+    gap: 20px;
+    overflow-x: auto;
 }
 .card{
-    
-    display: flex;
-    flex-direction: row;
+    width: 300px;
+    padding: 20px;
+    font-size: 12px;
+    flex: 0 0 auto;         
+    display: flex;          
+   flex-direction: row;
+   position: relative;
 }
-.Card1{
-    display: flex;
-    width: 150px;
-    flex-direction: column;
+.card-badge{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #fff;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
+
 .card-image{
     width: 100%;
+    border-radius: 9px;
+    margin-bottom: 9px;
 }
 .card-text{
     display: flex;
@@ -114,8 +124,14 @@ body {
 .card-text-3 > h2{
     margin: 0;
 }
-@media screen and (maxwidth:900px) {
-    .hero1{
-        width: 10px;
+@media (max-width:900px) {
+    .logo{
+        width: 100px;
     }
+ .logoName{
+    font-size: 15px;
+ }
+ .nav-items{
+    font-size: 15px;
+ }
 }

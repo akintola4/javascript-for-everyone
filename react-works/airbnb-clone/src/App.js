@@ -5,6 +5,7 @@ import Hero from "./Component/Hero";
 export default function App() {
     const card = data.map((info) => {
         return <Card
+        key={info.id}
         //{require("../images/avatar.png")}
             img= {info.img}
             rating={info.stats.rating}
@@ -12,6 +13,7 @@ export default function App() {
             country={info.country}
             title={info.title}
             price={info.price}
+            openSpots={info.openSpots}
         />
     })
     return (
