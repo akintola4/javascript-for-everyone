@@ -5,15 +5,19 @@ import Hero from "./Component/Hero";
 export default function App() {
     const card = data.map((info) => {
         return <Card
-        key={info.id}
-        //{require("../images/avatar.png")}
-            img= {info.img}
-            rating={info.stats.rating}
-            reviewCount={info.stats.reviewCount}
-            country={info.country}
-            title={info.title}
-            price={info.price}
-            openSpots={info.openSpots}
+            //the unqiue id for the data a unqiue key prop
+            key={info.id}
+            //{require("../images/avatar.png")}
+            // it like this info is an object containig all the data in the data.js file
+            //we then put info() inside our prop thus when we want to soruce the data 
+            //we use prop.info."name of the data"
+            //remember info is an object so we use dot notation to source our data from it
+            info={info} //this contains all the data we need 
+
+
+        //we can also use the spread operator to access the object 
+        // {...info}
+        //if you use this method remove all the .info we used in our card component
         />
     })
     return (
@@ -21,9 +25,9 @@ export default function App() {
             <Nav />
             <Hero />
             <div className="card-section">
-            {card}
+                {card}
             </div>
-            
+
         </div>
     )
 }
