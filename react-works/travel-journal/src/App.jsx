@@ -1,31 +1,35 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import  Nav  from "./component/Nav.jsx";
-
+import Nav from "./component/Nav.jsx";
+import Card from "./component/Card";
+import data from "./data";
 function App() {
-  const [count, setCount] = useState(0)
+  console.log(data)
+  const card = data.map((item) => {
+    return <Card
+      //the unqiue id for the data a unqiue key prop
+      key={item.id}
+      //{require("../images/avatar.png")}
+      // it like this info is an object containig all the data in the data.js file
+      //we then put info() inside our prop thus when we want to soruce the data 
+      //we use prop.info."name of the data"
+      //remember info is an object so we use dot notation to source our data from it
+      item={item} //this contains all the data we need 
+
+    //we can also use the spread operator to access the object 
+    // {...info}
+    //if you use this method remove all the .info we used in our card component
+    />
+  })
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
       <Nav />
+      <div className="card-section">
+        {card}
+      </div>
+
     </div>
   )
 }
