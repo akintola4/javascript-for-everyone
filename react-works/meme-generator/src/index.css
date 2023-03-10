@@ -94,7 +94,7 @@ body {
   text-align: center;
   letter-spacing: -0.1em;
   color: #FFFFFF;
-
+cursor: pointer;
 }
 .submit:hover{
   border:1px solid #A626D3;
