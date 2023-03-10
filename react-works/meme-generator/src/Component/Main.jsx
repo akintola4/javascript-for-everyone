@@ -1,12 +1,16 @@
 export default function Main(props) {
-    return(
-        <div className="container">
-            <div className="input-section">
-            <input type="text" className="first-input" />
-            <input type="text" className="second-input"  />
-            <input type="button" value="" className="submit"  />
-            </div>
-            <img src="" alt="" />
-        </div>
+    return (
+        <main className="container">
+            <form className="input-section">
+                <div className="input-box">
+                    <input type="text" className="input" />
+                    <input type="text" className="input" />
+                </div>
+                <div className="input-submit">
+                    <input className="submit" type="button" value="Get a new meme image  🖼"  />
+                </div>
+            </form>
+            <img className="img" src="/memeimg.png" alt="" />
+        </main>
     )
 }
