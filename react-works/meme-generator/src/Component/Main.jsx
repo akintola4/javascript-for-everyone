@@ -1,10 +1,17 @@
+
+import memeData from "../memeData"
 export default function Main(props) {
-    function click(){
-  alert("it was clicked")
+    console.log(click())
+    function click() {
+        // alert("it was clicked")
+        const memeArray = memeData.data.memes
+        const random =  Math.floor(Math.random() * memeArray.length)
+        const url = memeArray[random].url
+        return url
     }
     return (
         <main className="container">
-            <form className="input-section">
+            <div className="input-section">
                 <div className="input-box">
                     <input type="text" className="input" />
                     <input type="text" className="input" />
@@ -14,10 +21,12 @@ export default function Main(props) {
                     we are going to just call it like a value click without the () 
                     reason why is for it not to load immediate but wait till it has been clicked
                     */}
-                    <input onClick={click} className="submit" type="button" value="Get a new meme image  🖼"  />
+                    <button onClick={click} className="submit">
+                        Get a new meme image  🖼
+                    </button>
                 </div>
-            </form>
-            <img className="img" src="/memeimg.png" alt="" />
+            </div>
+            <img className="img" src={click()} alt="" />
         </main>
     )
 }
