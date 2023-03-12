@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## to host it using netlify
+you run npm run build 
+drag and drop the build folder called "dist" into the upload section 
+and you done
+
+## to host it using vercel
+you run npm run build 
+type sudo npm i -g vercel
+type in password then wait for download
+type vercel
+type y
+ask for which scope to deploy too select your name 
+it will ask to link to existing project type ypur choice (N)
+it will ask for a name
+it will ask for the directory (enter)
+edit build setting (N)
+drag and drop the build folder called "dist" into the upload section 
+and you done
