@@ -16,3 +16,8 @@ npm start
 
 ## to create a production build 
 npm run build
+
+## to host it using netlify
+you run npm run build 
+drag and drop the build folder called "dist" into the upload section 
+and you done
