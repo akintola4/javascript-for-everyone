@@ -5,17 +5,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+//state refers to a value that is managed by a component 
+
 function App() {
+  function handleClick() {
+    setResult("No")
+  }
   // here we destructure the array in the varaible declearation 
   //here put the first content of the array into the varaible called result
-const [result, func] = useState("yes")
-console.log(result)
+const [result, setResult] = useState("YES")
+
   return (
     <div className="App">
-      <h1>Is state important to know?</h1>
+      <h1 className='state-title'>Is state important to know?</h1>
       <div>
-        <h1>
-          
+        <h1 onClick={handleClick} className='state-value'> 
+          {result}
            {/*  we have to destructure the array to get what we looking for which is the string called yes  */}
             {/* state contains two data in an array is state is an array
             ["yes", function()] 
