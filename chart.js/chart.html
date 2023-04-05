@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="chart">
+        <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+                <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+                <div class=""></div>
+            </div>
+        </div>
+        <canvas id="myChart" style="display: block; height: 249px; width: 498px; box-sizing: border-box;" width="996" height="498" class="chartjs-render-monitor"> </canvas>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "Oct", "Nov", "Dec"],
+                datasets: [{
+                    label: 'This month',
+                    data: [100000, 150000, 100000, 150000, 100000, 120000, 220342, 100000, 150000, 100000, 150000, 100000],
+                    borderWidth: 3,
+                    borderColor: '#751BD6',
+
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            lineWidth: 0
+                        }
+
+                    },
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            borderColor: "green",
+                            lineWidth: 0,
+                        }
+
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
