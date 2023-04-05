@@ -21,3 +21,11 @@ npm run build
 you run npm run build 
 drag and drop the build folder called "dist" into the upload section 
 and you done
+
+
+## using vite 
+npm create vite@latest
+
+## to start a local host 
+npm install 
+npm run dev
