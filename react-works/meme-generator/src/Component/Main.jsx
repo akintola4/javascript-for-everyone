@@ -1,7 +1,21 @@
-
+import { useState } from "react";
 import memeData from "../memeData"
 export default function Main(props) {
     console.log(click())
+//here i created a a state to use in our webpage
+//first is the variable name 
+//second is used to update the state a callback function
+// i state the usestate to an empty string
+const [memeImage, setMeme] = useState("")
+
+function getMemeImage() {
+    //this is to destructure the api data 
+    const memeArray = memeData.data.memes
+    // this is used to get a random image
+    const random =  Math.floor(Math.random() * memeArray.length)
+    //reason why didnt use the previous string is cause i dont need it and set the state to the new one
+    setMeme(memeArray[random].url)
+}
     function click() {
         // alert("it was clicked")
         const memeArray = memeData.data.memes
@@ -21,12 +35,12 @@ export default function Main(props) {
                     we are going to just call it like a value click without the () 
                     reason why is for it not to load immediate but wait till it has been clicked
                     */}
-                    <button onClick={click} className="submit">
+                    <button onClick={getMemeImage} className="submit">
                         Get a new meme image  🖼
                     </button>
                 </div>
             </div>
-            <img className="img" src={click()} alt="" />
+            <img className="img" src={memeImage} alt="" />
         </main>
     )
 }

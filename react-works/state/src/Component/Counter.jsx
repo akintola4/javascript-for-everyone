@@ -19,6 +19,14 @@ your new value of state
 
         setCount((prevCount) => prevCount - 1)
     }
+
+    //testing my mind
+    // function add() {
+    //     setCount((oldCount) => oldCount + 1)
+    // }
+    // function minus() {
+    //     setCount((oldCount) => oldCount - 1)
+    // }
     return(
         <div className="counter">
             <button onClick={minus} className="counter-minus">-</button>
