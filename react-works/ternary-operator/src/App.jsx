@@ -5,7 +5,8 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+const isGoingOut =false
+let answer = isGoingOut === true ? "YES" : "NO"
   return (
     <div className="App">
       <div>
