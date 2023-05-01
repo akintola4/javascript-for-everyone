@@ -40,6 +40,9 @@ function getMemeImage() {
                     </button>
                 </div>
             </div>
+            {/* this is where the image will display here i set the src to the memeImage function where it constantly being 
+            changed when the button is being clicked 
+            */}
             <img className="img" src={memeImage} alt="" />
         </main>
     )
