@@ -4,31 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-const isGoingOut =false
-let answer = isGoingOut === true ? "YES" : "NO"
+  //created a state function 
+  const [isGoingOut,  setIsGoingOut] = useState(true)
+  function toggleIsGoingOut() {
+    //so here i will have to set the state value to the another value using a call back function
+    setIsGoingOut((oldIsGoingOut) => !oldIsGoingOut)
+    
+  }
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h1 className='state--title'>Do i feel like going out tonight?</h1>
+    {/* here i created an onclick function that changes the state value when clicked */}
+    <div onClick={toggleIsGoingOut} className='state--value'>
+      {/* here i used a ternary operator to tell it what to display using those cconditions */}
+      <h1>{isGoingOut === true ? "YES" : "NO"}</h1>
+    </div>
     </div>
   )
 }
