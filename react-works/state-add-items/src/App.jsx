@@ -11,15 +11,20 @@ function App() {
    * 
    * Don't worry about fixing `addItem` quite yet.
    */
-  const [thingsArray, setThingsArray] = useState["Thing 1", "Thing 2"]
+
   
-  
+  const [thingsArray, setThingsArray] = useState(["Things 1", "Things 2"])
   function addItem() {
-      // We'll work on this next
-      // const newThingText = `Thing ${thingsArray.length + 1}`
-      // thingsArray.push(newThingText)
-      // document.getElementById()
-      // console.log(thingsArray)
+
+      setThingsArray(
+        //this is a callback function
+        (prevThingsArray)=>{
+        //here i will return a new array but firstly
+        //i will copy the former array to create a copy of the said array 
+        //then i will add a new item inside the copied array 
+        //the reason i used preThingsArray.lenght is to get the fomer number of items in the array then add 1 to increase it
+        return [...prevThingsArray, `Things ${prevThingsArray.length + 1}`]
+      })
   }
   
   const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
