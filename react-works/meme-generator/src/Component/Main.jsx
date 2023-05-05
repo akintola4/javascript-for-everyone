@@ -1,28 +1,30 @@
 import { useState } from "react";
 import memeData from "../memeData"
 export default function Main(props) {
-    console.log(click())
+
 //here i created a a state to use in our webpage
 //first is the variable name 
 //second is used to update the state a callback function
 // i state the usestate to an empty string
-const [memeImage, setMeme] = useState("")
-
+const [memeImage, setMeme] = useState({
+    topText:"",
+    bottomText:"",
+    randomImage:"https://i.imgflip.com/30b1gx.jpg"
+})
+const [allMemeImages, setAllMemeImages] = useState(memeData) 
 function getMemeImage() {
     //this is to destructure the api data 
-    const memeArray = memeData.data.memes
+    const memeArray = allMemeImages.data.memes
     // this is used to get a random image
     const random =  Math.floor(Math.random() * memeArray.length)
     //reason why didnt use the previous string is cause i dont need it and set the state to the new one
-    setMeme(memeArray[random].url)
+    let url =memeArray[random].url
+    setMeme(prevMeme =>({
+            ...prevMeme,
+            randomImage: url
+
+    }))
 }
-    function click() {
-        // alert("it was clicked")
-        const memeArray = memeData.data.memes
-        const random =  Math.floor(Math.random() * memeArray.length)
-        const url = memeArray[random].url
-        return url
-    }
     return (
         <main className="container">
             <div className="input-section">
@@ -43,7 +45,7 @@ function getMemeImage() {
             {/* this is where the image will display here i set the src to the memeImage function where it constantly being 
             changed when the button is being clicked 
             */}
-            <img className="img" src={memeImage} alt="" />
+            <img className="img" src={memeImage.randomImage} alt="" />
         </main>
     )
 }

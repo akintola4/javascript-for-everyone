@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Star from './Component/star'
 function App() {
   const [contact, setContact] = useState({
     firstName: "Tope",
@@ -12,7 +12,7 @@ function App() {
     isFavorite: false
   })
   //here i use a tenray operator to enable me change the star image 
-  let StarIcon = contact.isFavorite === true ? `../public/star-fill.svg` : `../public/Empty_Star.svg`
+  // let StarIcon = contact.isFavorite === true ? `../public/star-fill.svg` : `../public/Empty_Star.svg`
   function toggleFavorite() {
     setContact(prevContact => {
       return {
@@ -31,11 +31,14 @@ function App() {
       <article className="card">
         <img src="./public/avatar.svg" className="card--image" />
         <div className="card--info">
-          <img
+          {/* <img
             src={`../public/${StarIcon}`}
             className="card--favorite"
             onClick={toggleFavorite}
-          />
+          /> */}
+          {/* here i added a new component called star and created a prop to can take in a state object, after that i created a custom prop
+          called handleCLick to collect a function in the app.jsx so i can use the toggle function in my star component */}
+          <Star isFilled={contact.isFavorite} handleClick={toggleFavorite}/>
           {/* in order to access the date in the object we are going to use dot notation to do that said task 
                 and we are going to call the object nambed contact then the name of the data we need
                 */}
