@@ -5,7 +5,7 @@ import boxes from "./boxes"
 import './App.css'
 import Box from './box'
 
-function App(props) {
+function App() {
     //here i access the js data 
     const [squares, setSquares] = useState(boxes)
 
