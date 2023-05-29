@@ -34,7 +34,7 @@ function toggle(id){
 //   return newSquares
 //  })
 
-//we can use a more less code in here using tenary and mao 
+//we can use a more less code in here using tenary and map
 
 setSquares(prevSquares =>{
   return prevSquares.map((squares) =>{
@@ -50,6 +50,9 @@ setSquares(prevSquares =>{
         key={squares.id} 
         id={squares.id} 
         toggle={toggle} 
+        //we can also write it in a better way where we call the toggle function
+        //toggle={ ()=>togggle(squares.id)}
+        //then we go to the box and just call the props.toggle
         on={squares.on} />
     ))
     return (
