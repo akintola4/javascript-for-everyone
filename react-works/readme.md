@@ -29,3 +29,4 @@ npm create vite@latest
 ## to start a local host 
 npm install 
 npm run dev
+
